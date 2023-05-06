@@ -7,12 +7,12 @@ export type RecipeListTopProps = {
 
 export const RecipeListTop: React.FC<RecipeListTopProps> = ({onClick}) => {
     return (
-	<div className="absolute flex w-full m-auto">
-        <p className="relative m-1 text-2xl top-6 left-6">Recipe List</p>
-        <div className="justify-end w-full m-auto">
+    <>
+        <div className="flex items-start w-full h-6 p-6 ml-auto mr-auto">
+        <p className="p-2 mr-3 text-3xl">Recipe List</p>
         <Button onClick={onClick}>カテゴリ別に見る</Button>
-        </div>
-	</div>
+	    </div>
+    </>
     );
 };
 

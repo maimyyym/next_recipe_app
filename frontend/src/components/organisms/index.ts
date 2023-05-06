@@ -1,4 +1,4 @@
 import { Header } from "./Header";
-import { Main } from "next/document";
+import { Main } from "./Main";
 
 export { Header, Main };

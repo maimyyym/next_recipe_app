@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { ApolloError, useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import { getRecipesQuery } from "@/graphql/queries/getRecipes";
 import { Recipe } from "@/types";
 
 export type UseRecipeProps = {
   recipes: Recipe[];
-  error: ApolloError | undefined;
+  error: Error | null;
   loading: boolean;
 }
 

@@ -1,16 +1,22 @@
-import React, {ReactElement} from "react";
-import { Header } from "../organisms/Header";
-import { Main } from "next/document";
+import React, {ReactNode} from "react";
+import { Header } from "../organisms";
+import { Main } from "../organisms";
 
-export type LayoutProps = {
-};
+type LayoutProps = {
+    mainContent: ReactNode;
 
-export const Layout: React.FC<LayoutProps> = () => {
+}
+
+export const Layout: React.FC<LayoutProps> = ({ mainContent }) => {
+
     return (
-    <>
+	<div>
         <Header />
-        <Main />
-    </>
+        <div className="h-screen mt-40 overflow-auto">
+            {mainContent}
+        </div>
+	</div>
     );
 };
+
 

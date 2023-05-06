@@ -1,7 +1,7 @@
 import { Pager } from "./Pager";
-import { RecipeDetail } from "..";
-import { RecipeList } from "..";
+import { RecipeDetail } from "./RecipeDetail";
+import { RecipeList } from "./RecipeList";
 import { RecipeListTop } from "./RecipeListTop";
-import { RecipeSearchSidebar } from "..";
+import { RecipeSearchSidebar } from "./RecipeSearchSidebar";
 
 export { Pager, RecipeDetail, RecipeList, RecipeListTop, RecipeSearchSidebar };

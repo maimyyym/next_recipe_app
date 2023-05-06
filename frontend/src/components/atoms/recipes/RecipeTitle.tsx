@@ -8,7 +8,7 @@ export type RecipeTitleProps = {
 
 export const RecipeTitle: React.FC<RecipeTitleProps> = ({children, onClick, recipeId}) => {
     return (
-        <p className="text-xl" onClick={()=>onClick(recipeId)}>{children}</p>
+        <p className="w-auto p-1 m-2 text-xl font-bold hover:border-dashed hover:border-b-2 hover:border-vividRed" onClick={()=>onClick(recipeId)}>{children}</p>
     );
 };
 

@@ -1,14 +1,15 @@
 import React from "react";
-import { Header } from "../organisms";
 import { Main } from "../organisms";
+import { Layout } from "../templates/Layout";
 
 
 export const Page: React.FC = () => {
 
     return (
 	<div>
-        <Header />
-        <Main />
+        <Layout
+            mainContent={<Main />}
+        />
 	</div>
     );
 };
