@@ -17,8 +17,6 @@ export const Main: React.FC = () => {
     const { isSidebarOpen, openSidebar, closeSidebar } = useSidebar();
     const { currentPageData, nextPage, prevPage, hasMore, hasLess } = usePagination(filteredRecipes,8)
 
-    const [isActiveItems, setIsActiveItems] = useState<string[]>([]);
-
     const handleSidebarOpen = () => {
         openSidebar();
     }
@@ -27,10 +25,13 @@ export const Main: React.FC = () => {
         closeSidebar();
     }
 
-    // 選択中のカテゴリを全てsetSelectedCategories配列に格納
     const handleCategoryChange = useCallback((category: string) => {
         if(category){
+            if(selectedCategories.includes(category)) {
+                setSelectedCategories(selectedCategories.filter((item) => item !== category));
+            } else {
         setSelectedCategories([...selectedCategories, category]);
+            }
         }
     }, [selectedCategories, setSelectedCategories]);
 
@@ -49,7 +50,7 @@ export const Main: React.FC = () => {
 
         {isSidebarOpen && 
         <RecipeSearchSidebar
-        isActive={isActiveItems}
+        isActive={selectedCategories}
         handleCategoryChange={handleCategoryChange}
         selectedCategories={selectedCategories}
         onClick={handleCloseClick}/> }

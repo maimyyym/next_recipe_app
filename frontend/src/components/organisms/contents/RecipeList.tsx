@@ -31,9 +31,10 @@ export const RecipeList: React.FC<RecipeListProps> = ({currentPageData, nextPage
         <>
     <div className="w-4/5 h-auto p-4 pt-10 m-auto ml-8 overflow-auto">
     <div>
-	<div className="flex flex-wrap justify-between p-10 align-content">
+	<div className="flex flex-wrap p-10 align-content">
         {currentPageData.map((recipe: any) => (
             <div key={recipe.key}>
+                <div className="w-1/4">
                 <RecipeCard
                 src="/image.png"
                 alt="料理画像置き場"
@@ -47,7 +48,8 @@ export const RecipeList: React.FC<RecipeListProps> = ({currentPageData, nextPage
             </p>
             </div>
             </RecipeCard>
-            {isToggleOpen && (
+            </div>
+            {isToggleOpen && selectedRecipedId === recipe.id && (
             <RecipeDetail
             src="/image.png"
             alt="料理画像置き場"

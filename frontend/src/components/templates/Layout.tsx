@@ -12,7 +12,7 @@ export const Layout: React.FC<LayoutProps> = ({ mainContent }) => {
     return (
 	<div>
         <Header />
-        <div className="h-screen mt-40 overflow-auto">
+        <div className="h-screen mt-40">
             {mainContent}
         </div>
 	</div>
