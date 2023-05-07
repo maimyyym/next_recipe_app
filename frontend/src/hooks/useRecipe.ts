@@ -3,14 +3,15 @@ import { useQuery } from "@apollo/client";
 import { getRecipesQuery } from "@/graphql/queries/getRecipes";
 import { Recipe } from "@/types";
 
+// グローバルで使用するレシピデータ＝useContextまたはRedux等に移行する
+
 export type UseRecipeProps = {
   recipes: Recipe[];
   error: Error | null;
   loading: boolean;
-}
+};
 
 export const useRecipe = (): UseRecipeProps => {
-
   // レシピデータの状態（初期値は空配列）
   const [recipes, setRecipes] = useState<Recipe[]>([]);
 
@@ -23,8 +24,5 @@ export const useRecipe = (): UseRecipeProps => {
     }
   }, [data, loading, error]);
 
-
-  return { recipes, error, loading }
+  return { recipes, error, loading };
 };
-
-

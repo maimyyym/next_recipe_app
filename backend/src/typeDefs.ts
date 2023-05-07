@@ -1,3 +1,4 @@
+// 未使用
 // スキーマ定義
 
 export const typeDefs = `#graphql
@@ -18,4 +19,3 @@ export const typeDefs = `#graphql
     addRecipe(title: String!, description: String!): Recipe
   }
 `;
-

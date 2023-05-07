@@ -7,21 +7,19 @@ type UseToggleResult = {
   closeToggle: () => void;
 };
 
-
 export const useToggle = (): UseToggleResult => {
   const [isToggleOpen, setIsToggleOpen] = useState(false);
-  const [selectedRecipedId, setSelectedRecipeId] = useState<string | ''>('')
+  const [selectedRecipedId, setSelectedRecipeId] = useState<string | "">("");
 
   const openToggle = (recipeId: string) => {
     setSelectedRecipeId(recipeId);
     setIsToggleOpen(true);
-  }
+  };
 
   const closeToggle = () => {
-    setSelectedRecipeId('');
+    setSelectedRecipeId("");
     setIsToggleOpen(false);
-  }
+  };
 
   return { isToggleOpen, selectedRecipedId, openToggle, closeToggle };
-
 };

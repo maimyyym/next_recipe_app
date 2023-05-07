@@ -1,10 +1,11 @@
+//　未使用
 import { mockRecipes } from "./mock/mockRecipes";
 
 type recipe = {
-    title: string;
-    description: string;
-    category: string;
-    user_id: number;
+  title: string;
+  description: string;
+  category: string;
+  user_id: number;
 };
 
 // リゾルバー：モックデータを操作

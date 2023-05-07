@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 
-export const getRecipesQuery = gql `
+export const getRecipesQuery = gql`
   query getRecipes {
     recipes {
       id
@@ -10,4 +10,3 @@ export const getRecipesQuery = gql `
     }
   }
 `;
-

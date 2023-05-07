@@ -1,14 +1,13 @@
-import React, {ReactNode} from "react";
+import React, { ReactNode } from "react";
 
 export type TextProps = {
-    children: ReactNode;
+  children: ReactNode;
 };
 
-export const Text: React.FC<TextProps> = ({children}) => {
-    return (
-	<div>
-        <p className="text-sm text-black">{children}</p>
-	</div>
-    );
+export const Text: React.FC<TextProps> = ({ children }) => {
+  return (
+    <div>
+      <p className="text-sm text-black">{children}</p>
+    </div>
+  );
 };
-
